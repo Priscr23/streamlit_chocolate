@@ -20,7 +20,7 @@ añadiéndole azúcar y calentando la bebida.
 Con eso se fue expandiendo por toda europa; con la llegada de la Revolución industrial 
 se modificó aún más convirtiendola a lo que hoy en día conocemos como el chocolalte 
 en barra; así igual llegó mundialmente agregándole más ingredientes. """)
-st.image('C:/Users/prisc/apps/chocolate-project1/data/raw/cacao.webp')
+st.image('https://s3.abcstatics.com/media/bienestar/2019/10/04/cacao-1-U303043057595f0H--1248x698@abc.jpg')
 st.header('Data set')
 df=pd.read_csv('datos_modificados2.csv')
 st.dataframe(df)
