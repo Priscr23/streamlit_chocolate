@@ -22,7 +22,7 @@ se modificó aún más convirtiendola a lo que hoy en día conocemos como el cho
 en barra; así igual llegó mundialmente agregándole más ingredientes. """)
 st.image('C:/Users/prisc/apps/chocolate-project1/data/raw/cacao.webp')
 st.header('Data set')
-df=pd.read_csv('C:/Users/prisc/apps/chocolate-project1/reports/streamlit\datos_modificados2.csv')
+df=pd.read_csv('datos_modificados2.csv')
 st.dataframe(df)
 print('\n')
 moda_bean = df['Bean type'].mode()[0]
@@ -93,15 +93,6 @@ st.bar_chart(frecuencia_compania, color='#D2691E')
 st.caption('Con 47 chocolates siendo igual o arriba del porcentaje')
 st.write("La compañía que produce principalmente chocolate con más del 60% de cacao es:", compania_mas_comun)
 print('\n')
-st.subheader('Año de revisión')
-indice_ultima_revision = df['REF'].idxmax()
-ref_ultima_revision = df.loc[indice_ultima_revision, 'REF']
-fecha_ultima_revision = df.loc[indice_ultima_revision, 'Review date']
-rating_ultima_revision = df.loc[indice_ultima_revision, 'Rating']
-compania_ultima_revision = df.loc[indice_ultima_revision, 'Company']
-st.write("La última revisión realizada tiene el REF:", ref_ultima_revision, ", hecha en el año:", fecha_ultima_revision)
-st.write("Hecho hacia la compañía:", compania_ultima_revision, ", con un rating de:", rating_ultima_revision)
-print('\n')
 paises_latinoamerica = ['Argentina', 'Bolivia', 'Brasil', 'Chile', 'Colombia', 'Costa Rica', 'Cuba', 'Ecuador', 'El Salvador', 'Guatemala', 'Honduras', 'México', 'Nicaragua', 'Panamá', 'Paraguay', 'Perú', 'República Dominicana', 'Uruguay', 'Venezuela']
 latinoamerica_df = df[df['Company location'].isin(paises_latinoamerica)]
 num_companias_latinoamerica = latinoamerica_df.shape[0]
@@ -161,6 +152,7 @@ st.write('''El precio del cacao ha subido exponencialmente su precio en comparac
          hay más de 1.5 millones de niños trabajando en las plantaciones, realizando trabajos y tareas peligrosas que ponen en riesgo
          su vida.
          ''')
+st.image('https://i.pinimg.com/originals/3b/fc/39/3bfc39f13c899dce26c78914112d3305.jpg')
 st.subheader('ACTIVIDAD')
 st.write('Recuerden muy bien que color se están comiendo, y que sabor caracteriza a cada uno :)')
 st.markdown(
